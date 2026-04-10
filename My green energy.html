@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Green Energy — Солнечные панели и бесперебойное электричество</title>
+    
+    <!-- Подключение Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Подключение иконок Lucide -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Настройка темы Tailwind для строгого корпоративного стиля -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                        },
+                        corporate: {
+                            800: '#1e293b',
+                            900: '#0f172a',
+                            950: '#020617',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Базовые стили -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        /* Строгий градиент для главного экрана */
+        .hero-bg {
+            background-color: #0f172a;
+            background-image: radial-gradient(circle at top right, #1e293b 0%, #0f172a 60%);
+        }
+
+        /* Кастомный скроллбар */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- Навигация (Header) -->
+    <header class="fixed w-full z-50 bg-white border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Логотип -->
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <div class="w-8 h-8 bg-brand-600 rounded flex items-center justify-center">
+                        <i data-lucide="zap" class="text-white w-5 h-5"></i>
+                    </div>
+                    <span class="font-bold text-xl tracking-tight text-corporate-900">MY GREEN ENERGY</span>
+                </div>
+
+                <!-- Десктопное меню -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#services" class="text-slate-600 hover:text-brand-600 font-medium transition-colors text-sm uppercase tracking-wide">Услуги</a>
+                    <a href="#advantages" class="text-slate-600 hover:text-brand-600 font-medium transition-colors text-sm uppercase tracking-wide">Преимущества</a>
+                    <a href="mailto:info@mygreenenergy.ru" class="text-slate-600 hover:text-brand-600 font-medium transition-colors text-sm uppercase tracking-wide">Email</a>
+                </nav>
+
+                <!-- Контакты и кнопка (Десктоп) -->
+                <div class="hidden md:flex items-center gap-6">
+                    <a href="tel:+79409000625" class="text-corporate-900 font-semibold hover:text-brand-600 transition-colors flex items-center gap-2">
+                        <i data-lucide="phone" class="w-4 h-4"></i>
+                        +7 (940) 900-06-25
+                    </a>
+                    <a href="https://wa.me/79409000625" target="_blank" class="bg-brand-600 text-white px-5 py-2.5 rounded-sm font-medium hover:bg-brand-700 transition-colors shadow-sm">
+                        Написать в WhatsApp
+                    </a>
+                </div>
+
+                <!-- Кнопка мобильного меню -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-corporate-900 focus:outline-none p-2">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Мобильное меню -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="#services" class="block px-3 py-3 text-base font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-50">Услуги</a>
+                <a href="#advantages" class="block px-3 py-3 text-base font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-50">Преимущества</a>
+                <div class="border-t border-slate-100 mt-4 pt-4">
+                    <a href="tel:+79409000625" class="block px-3 py-2 text-base font-bold text-corporate-900">+7 (940) 900-06-25</a>
+                    <a href="https://wa.me/79409000625" class="block mt-2 text-center bg-brand-600 text-white px-5 py-3 rounded-sm font-medium">Связаться в WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Главный экран (Hero) -->
+    <section class="pt-32 pb-20 lg:pt-48 lg:pb-32 hero-bg text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-white/10 border border-white/20 text-sm font-medium mb-6">
+                    <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
+                    Работаем по всей Абхазии
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                    Бесперебойное электричество <br class="hidden lg:block" />и независимость от городских сетей
+                </h1>
+                <p class="text-lg sm:text-xl text-slate-300 mb-10 max-w-2xl leading-relaxed">
+                    Проектирование и установка солнечных электростанций, инверторов и аккумуляторов для частных домов и бизнеса. Надежное оборудование и монтаж «под ключ».
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="tel:+79409000625" class="bg-brand-600 text-white text-center px-8 py-4 rounded-sm font-semibold text-lg hover:bg-brand-500 transition-colors shadow-lg shadow-brand-600/30">
+                        Позвонить нам
+                    </a>
+                    <a href="#services" class="bg-transparent border border-slate-500 text-white text-center px-8 py-4 rounded-sm font-semibold text-lg hover:bg-slate-800 transition-colors">
+                        Изучить услуги
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute top-0 right-0 -translate-y-1/4 translate-x-1/4 w-[800px] h-[800px] border border-slate-700/30 rounded-full pointer-events-none"></div>
+        <div class="absolute top-0 right-0 -translate-y-1/4 translate-x-1/4 w-[600px] h-[600px] border border-slate-700/50 rounded-full pointer-events-none"></div>
+    </section>
+
+    <!-- Информационная полоса -->
+    <div class="bg-corporate-950 border-t border-slate-800 py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center divide-x divide-slate-800">
+                <div class="px-4">
+                    <div class="text-2xl font-bold text-white mb-1">100+</div>
+                    <div class="text-sm text-slate-400">Успешных проектов</div>
+                </div>
+                <div class="px-4">
+                    <div class="text-2xl font-bold text-white mb-1">100%</div>
+                    <div class="text-sm text-slate-400">Оригинальное оборудование</div>
+                </div>
+                <div class="px-4">
+                    <div class="text-2xl font-bold text-white mb-1">Гарантия</div>
+                    <div class="text-sm text-slate-400">На оборудование и монтаж</div>
+                </div>
+                <div class="px-4">
+                    <div class="text-2xl font-bold text-white mb-1">24/7</div>
+                    <div class="text-sm text-slate-400">Техническая поддержка</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Раздел Услуги -->
+    <section id="services" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-corporate-900 mb-4">Наши основные направления</h2>
+                <div class="w-16 h-1 bg-brand-600 mx-auto mb-6"></div>
+                <p class="text-slate-600 text-lg">Комплексные решения для обеспечения вашего объекта стабильной электроэнергией независимо от внешних факторов.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 border border-slate-200 rounded-sm hover:shadow-lg transition-shadow duration-300 group">
+                    <div class="w-14 h-14 bg-slate-100 rounded-sm flex items-center justify-center mb-6 group-hover:bg-brand-50 transition-colors">
+                        <i data-lucide="sun" class="w-7 h-7 text-corporate-900 group-hover:text-brand-600 transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-corporate-900 mb-3">Солнечные панели</h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        Проектирование и монтаж солнечных электростанций под ключ. Эффективный сбор солнечной энергии для автономного питания дома или бизнеса.
+                    </p>
+                    <ul class="space-y-2 text-sm text-slate-700">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-600"></i> Монокристаллические модули</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-600"></i> Сетевые и гибридные системы</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-8 border border-slate-200 rounded-sm hover:shadow-lg transition-shadow duration-300 group">
+                    <div class="w-14 h-14 bg-slate-100 rounded-sm flex items-center justify-center mb-6 group-hover:bg-brand-50 transition-colors">
+                        <i data-lucide="battery-charging" class="w-7 h-7 text-corporate-900 group-hover:text-brand-600 transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-corporate-900 mb-3">Аккумуляторы и ИБП</h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        Системы бесперебойного питания для квартир и домов. Защита от частых отключений городских сетей и скачков напряжения.
+                    </p>
+                    <ul class="space-y-2 text-sm text-slate-700">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-600"></i> Литий-железо-фосфатные АКБ</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-600"></i> Мощные инверторы</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-8 border border-slate-200 rounded-sm hover:shadow-lg transition-shadow duration-300 group">
+                    <div class="w-14 h-14 bg-slate-100 rounded-sm flex items-center justify-center mb-6 group-hover:bg-brand-50 transition-colors">
+                        <i data-lucide="settings" class="w-7 h-7 text-corporate-900 group-hover:text-brand-600 transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-corporate-900 mb-3">Проектирование и сервис</h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        Индивидуальный расчет мощности под ваши потребности. Профессиональный монтаж, пусконаладка и последующее сервисное обслуживание.
+                    </p>
+                    <ul class="space-y-2 text-sm text-slate-700">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-600"></i> Работа с крупными объектами</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-600"></i> Регулярное ТО систем</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Раздел Преимущества -->
+    <section id="advantages" class="py-24 bg-white border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-corporate-900 mb-6">Почему выбирают My Green Energy</h2>
+                    <p class="text-slate-600 text-lg mb-8 leading-relaxed">
+                        Мы предлагаем не просто оборудование, а надежное инженерное решение. Наша экспертиза позволяет реализовывать проекты любой сложности — от энергообеспечения частной квартиры до коммерческих объектов.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-10 h-10 bg-brand-50 rounded flex items-center justify-center">
+                                    <i data-lucide="shield-check" class="w-5 h-5 text-brand-600"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-corporate-900 mb-1">Только оригинальное оборудование</h4>
+                                <p class="text-slate-600">Прямые поставки от проверенных производителей. Мы гарантируем подлинность и долговечность компонентов.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-10 h-10 bg-brand-50 rounded flex items-center justify-center">
+                                    <i data-lucide="users" class="w-5 h-5 text-brand-600"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-corporate-900 mb-1">Индивидуальный подход</h4>
+                                <p class="text-slate-600">Каждая станция проектируется под конкретное энергопотребление и бюджет клиента.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-10 h-10 bg-brand-50 rounded flex items-center justify-center">
+                                    <i data-lucide="zap-off" class="w-5 h-5 text-brand-600"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-corporate-900 mb-1">Полная независимость</h4>
+                                <p class="text-slate-600">Забудьте о веерных отключениях. Ваш дом или бизнес всегда будет обеспечен электроэнергией.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative hidden lg:block">
+                    <div class="aspect-square bg-slate-100 rounded-sm border border-slate-200 flex items-center justify-center relative z-10 overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-slate-200 to-slate-50"></div>
+                        <i data-lucide="cpu" class="w-32 h-32 text-slate-300 relative z-10"></i>
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 w-full h-full border-2 border-brand-500 rounded-sm z-0"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал (Footer) -->
+    <footer class="bg-corporate-950 text-slate-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 border-b border-slate-800 pb-8">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-2 mb-4">
+                        <i data-lucide="zap" class="text-brand-500 w-5 h-5"></i>
+                        <span class="font-bold text-lg tracking-tight text-white">MY GREEN ENERGY</span>
+                    </div>
+                    <p class="text-sm max-w-sm mb-6">
+                        Профессиональные решения в сфере возобновляемой энергетики. Бесперебойное электричество в Абхазии.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="https://instagram.com/mygreenenergy_apsny" target="_blank" class="w-10 h-10 rounded-sm bg-corporate-900 flex items-center justify-center hover:bg-brand-600 hover:text-white transition-colors border border-slate-800 hover:border-brand-600">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://www.facebook.com/mygreenenergy.apsny" target="_blank" class="w-10 h-10 rounded-sm bg-corporate-900 flex items-center justify-center hover:bg-brand-600 hover:text-white transition-colors border border-slate-800 hover:border-brand-600">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Контакты</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="phone" class="w-4 h-4 text-brand-500 mt-0.5 shrink-0"></i>
+                            <a href="tel:+79409000625" class="hover:text-white transition-colors">+7 (940) 900-06-25</a>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="mail" class="w-4 h-4 text-brand-500 mt-0.5 shrink-0"></i>
+                            <a href="mailto:info@mygreenenergy.ru" class="hover:text-white transition-colors text-xs break-all">info@mygreenenergy.ru</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Навигация</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#services" class="hover:text-white transition-colors">Услуги</a></li>
+                        <li><a href="#advantages" class="hover:text-white transition-colors">Преимущества</a></li>
+                        <li><a href="mailto:admin@mygreenenergy.ru" class="hover:text-white transition-colors">Поддержка</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row justify-between items-center text-xs">
+                <p>&copy; 2024 My Green Energy. Все права защищены.</p>
+                <p class="mt-2 md:mt-0">Республика Абхазия</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Инициализация иконок
+        lucide.createIcons();
+        
+        // Мобильное меню
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        
+        btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+        
+        // Закрытие при клике на ссылку
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => menu.classList.add('hidden'));
+        });
+    </script>
+</body>
+</html>
