@@ -11,63 +11,9 @@
     <!-- Подключение иконок Lucide -->
     <script src="https://unpkg.com/lucide@latest"></script>
     
-    <!-- Настройка темы Tailwind для строгого корпоративного стиля -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            50: '#f0fdf4',
-                            100: '#dcfce7',
-                            500: '#22c55e',
-                            600: '#16a34a',
-                            700: '#15803d',
-                        },
-                        corporate: {
-                            800: '#1e293b',
-                            900: '#0f172a',
-                            950: '#020617',
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
-    
-    <!-- Базовые стили -->
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            -webkit-font-smoothing: antialiased;
-        }
-        
-        /* Строгий градиент для главного экрана */
-        .hero-bg {
-            background-color: #0f172a;
-            background-image: radial-gradient(circle at top right, #1e293b 0%, #0f172a 60%);
-        }
-
-        /* Кастомный скроллбар */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #f1f5f9;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #cbd5e1;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #94a3b8;
-        }
-    </style>
+    <!-- Внешние стили и скрипты -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
 </head>
 <body class="bg-slate-50 text-slate-800">
 
@@ -344,20 +290,5 @@
         </div>
     </footer>
 
-    <script>
-        // Инициализация иконок
-        lucide.createIcons();
-        
-        // Мобильное меню
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
-        
-        btn.addEventListener('click', () => menu.classList.toggle('hidden'));
-        
-        // Закрытие при клике на ссылку
-        menu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => menu.classList.add('hidden'));
-        });
-    </script>
 </body>
 </html>
