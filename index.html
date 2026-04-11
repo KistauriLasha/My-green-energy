@@ -72,9 +72,12 @@
 
     <!-- Главный экран (Hero) -->
     <section class="pt-32 pb-20 lg:pt-48 lg:pb-32 hero-bg text-white relative overflow-hidden">
+        <!-- Декоративная сетка -->
+        <div class="absolute inset-0 hero-grid-pattern opacity-10 pointer-events-none"></div>
+
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="max-w-3xl">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-white/10 border border-white/20 text-sm font-medium mb-6">
+            <div class="max-w-3xl animate-fade-in-up">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 backdrop-blur-md border border-white/10 text-sm font-medium mb-6 hover:bg-white/10 transition-colors cursor-default">
                     <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
                     Работаем по всей Абхазии
                 </div>
@@ -85,10 +88,10 @@
                     Проектирование и установка солнечных электростанций, инверторов и аккумуляторов для частных домов и бизнеса. Надежное оборудование и монтаж «под ключ».
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="tel:+79409000625" class="bg-brand-600 text-white text-center px-8 py-4 rounded-sm font-semibold text-lg hover:bg-brand-500 transition-colors shadow-lg shadow-brand-600/30">
+                    <a href="tel:+79409000625" class="bg-brand-600 text-white text-center px-8 py-4 rounded-sm font-semibold text-lg hover:bg-brand-500 hover:scale-[1.02] transition-all duration-300 shadow-lg shadow-brand-600/30">
                         Позвонить нам
                     </a>
-                    <a href="#services" class="bg-transparent border border-slate-500 text-white text-center px-8 py-4 rounded-sm font-semibold text-lg hover:bg-slate-800 transition-colors">
+                    <a href="#services" class="bg-transparent border border-slate-500 text-white text-center px-8 py-4 rounded-sm font-semibold text-lg hover:bg-slate-800 hover:scale-[1.02] transition-all duration-300">
                         Изучить комплекты
                     </a>
                 </div>
@@ -134,47 +137,50 @@
 
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Комплект 1 -->
-                <div class="bg-white p-8 border border-slate-200 rounded-sm hover:shadow-lg transition-shadow duration-300 group text-center">
-                    <div class="w-14 h-14 bg-slate-100 rounded-sm flex items-center justify-center mb-6 mx-auto group-hover:bg-brand-50 transition-colors">
-                        <i data-lucide="battery" class="w-7 h-7 text-corporate-900 group-hover:text-brand-600 transition-colors"></i>
+                <div class="bg-white p-8 border border-slate-100 rounded-2xl hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group text-center relative overflow-hidden">
+                    <div class="w-16 h-16 bg-brand-50 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:bg-brand-600 transition-colors duration-300">
+                        <i data-lucide="battery" class="w-8 h-8 text-brand-600 group-hover:text-white transition-colors duration-300"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-corporate-900 mb-6 pb-4 border-b border-slate-100">Комплект 1</h3>
+                    <h3 class="text-xl font-bold text-corporate-900 mb-6 pb-4 border-b border-slate-100 uppercase tracking-wider">Комплект 1</h3>
                     <div class="space-y-4 mb-8">
                         <p class="font-bold text-lg text-corporate-900 leading-tight">Бесперебойное питание 5 кВт</p>
-                        <p class="text-slate-500 text-sm">от городской сети</p>
+                        <p class="text-slate-500 text-sm italic">от городской сети</p>
                     </div>
                     <div class="pt-6 border-t border-slate-100">
-                        <div class="text-2xl font-bold text-brand-600 uppercase tracking-tight">370 000  ₽ </div>
+                        <div class="text-3xl font-bold text-brand-600 tracking-tight">370 000  ₽ </div>
                     </div>
                 </div>
 
                 <!-- Комплект 2 -->
-                <div class="bg-white p-8 border border-slate-200 rounded-sm hover:shadow-lg transition-shadow duration-300 group text-center">
-                    <div class="w-14 h-14 bg-slate-100 rounded-sm flex items-center justify-center mb-6 mx-auto group-hover:bg-brand-50 transition-colors">
-                        <i data-lucide="sun" class="w-7 h-7 text-corporate-900 group-hover:text-brand-600 transition-colors"></i>
+                <div class="bg-white p-8 border-2 border-brand-500 rounded-2xl shadow-lg shadow-brand-500/10 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group text-center relative overflow-hidden scale-105 z-10">
+                    <div class="absolute top-0 right-0 bg-brand-500 text-white text-[10px] font-bold px-4 py-1 uppercase tracking-widest rounded-bl-lg">
+                        Популярный выбор
                     </div>
-                    <h3 class="text-xl font-bold text-corporate-900 mb-6 pb-4 border-b border-slate-100">Комплект 2</h3>
+                    <div class="w-16 h-16 bg-brand-50 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:bg-brand-600 transition-colors duration-300">
+                        <i data-lucide="sun" class="w-8 h-8 text-brand-600 group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-corporate-900 mb-6 pb-4 border-b border-slate-100 uppercase tracking-wider">Комплект 2</h3>
                     <div class="space-y-4 mb-8">
                         <p class="font-bold text-lg text-corporate-900 leading-tight">Солнечная энергия 5 кВт</p>
-                        <p class="text-slate-500 text-sm">от сети и солнца</p>
+                        <p class="text-slate-500 text-sm italic">от сети и солнца</p>
                     </div>
                     <div class="pt-6 border-t border-slate-100">
-                        <div class="text-2xl font-bold text-brand-600 uppercase tracking-tight">500 000  ₽ </div>
+                        <div class="text-3xl font-bold text-brand-600 tracking-tight">500 000  ₽ </div>
                     </div>
                 </div>
 
                 <!-- Комплект 3 -->
-                <div class="bg-white p-8 border border-slate-200 rounded-sm hover:shadow-lg transition-shadow duration-300 group text-center">
-                    <div class="w-14 h-14 bg-slate-100 rounded-sm flex items-center justify-center mb-6 mx-auto group-hover:bg-brand-50 transition-colors">
-                        <i data-lucide="zap" class="w-7 h-7 text-corporate-900 group-hover:text-brand-600 transition-colors"></i>
+                <div class="bg-white p-8 border border-slate-100 rounded-2xl hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group text-center relative overflow-hidden">
+                    <div class="w-16 h-16 bg-brand-50 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:bg-brand-600 transition-colors duration-300">
+                        <i data-lucide="zap" class="w-8 h-8 text-brand-600 group-hover:text-white transition-colors duration-300"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-corporate-900 mb-6 pb-4 border-b border-slate-100">Комплект 3</h3>
+                    <h3 class="text-xl font-bold text-corporate-900 mb-6 pb-4 border-b border-slate-100 uppercase tracking-wider">Комплект 3</h3>
                     <div class="space-y-4 mb-8">
                         <p class="font-bold text-lg text-corporate-900 leading-tight">Солнечная энергия 10 кВт</p>
-                        <p class="text-slate-500 text-sm">от сети и солнца</p>
+                        <p class="text-slate-500 text-sm italic">от сети и солнца</p>
                     </div>
                     <div class="pt-6 border-t border-slate-100">
-                        <div class="text-2xl font-bold text-brand-600 uppercase tracking-tight">980 000  ₽ </div>
+                        <div class="text-3xl font-bold text-brand-600 tracking-tight">980 000  ₽ </div>
                     </div>
                 </div>
             </div>
@@ -232,11 +238,21 @@
                 </div>
                 
                 <div class="relative hidden lg:block">
-                    <div class="aspect-square bg-slate-100 rounded-sm border border-slate-200 flex items-center justify-center relative z-10 overflow-hidden">
-                        <div class="absolute inset-0 bg-gradient-to-tr from-slate-200 to-slate-50"></div>
-                        <i data-lucide="cpu" class="w-32 h-32 text-slate-300 relative z-10"></i>
+                    <div class="grid grid-cols-2 gap-4 relative z-10">
+                        <div class="aspect-square bg-slate-50 rounded-2xl border border-slate-100 flex items-center justify-center shadow-sm hover:shadow-md transition-shadow">
+                            <i data-lucide="sun" class="w-16 h-16 text-brand-600"></i>
+                        </div>
+                        <div class="aspect-square bg-white rounded-2xl border border-slate-100 flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow translate-y-8">
+                            <i data-lucide="battery" class="w-16 h-16 text-brand-600"></i>
+                        </div>
+                        <div class="aspect-square bg-white rounded-2xl border border-slate-100 flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow -translate-y-8">
+                            <i data-lucide="zap" class="w-16 h-16 text-brand-600"></i>
+                        </div>
+                        <div class="aspect-square bg-slate-50 rounded-2xl border border-slate-100 flex items-center justify-center shadow-sm hover:shadow-md transition-shadow">
+                            <i data-lucide="shield-check" class="w-16 h-16 text-brand-600"></i>
+                        </div>
                     </div>
-                    <div class="absolute -bottom-6 -right-6 w-full h-full border-2 border-brand-500 rounded-sm z-0"></div>
+                    <div class="absolute -inset-4 bg-brand-50 rounded-full blur-3xl opacity-30 -z-10"></div>
                 </div>
             </div>
         </div>
@@ -252,38 +268,82 @@
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Наши услуги -->
-                <div class="flex flex-col items-center">
-                    <h3 class="text-2xl font-bold text-corporate-900 mb-6">Наши услуги</h3>
-                    <ul class="list-disc pl-5 space-y-3 text-slate-700">
-                        <li>Индивидуальный подход к каждому клиенту</li>
-                        <li>Установка комплектов электростанций</li>
-                        <li>Доставка оригинального оборудования</li>
-                        <li>Работа с крупными объектами</li>
+                <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-brand-50 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="settings" class="w-6 h-6 text-brand-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-corporate-900 mb-4">Наши услуги</h3>
+                    <ul class="space-y-3 text-slate-600">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-500 shrink-0 mt-0.5"></i>
+                            <span>Индивидуальный подход</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-500 shrink-0 mt-0.5"></i>
+                            <span>Установка комплектов электростанций</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-500 shrink-0 mt-0.5"></i>
+                            <span>Доставка оригинального оборудования</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-500 shrink-0 mt-0.5"></i>
+                            <span>Работа с крупными объектами</span>
+                        </li>
                     </ul>
                 </div>
 
                 <!-- Наша команда -->
-                <div class="flex flex-col items-center">
-                    <h3 class="text-2xl font-bold text-corporate-900 mb-6">Наша команда</h3>
-                    <ul class="list-disc pl-5 space-y-3 text-slate-700">
-                        <li>Инженеры</li>
-                        <li>Электрики</li>
-                        <li>Инженеры отопления</li>
-                        <li>Монтажники-высотники</li>
-                        <li>Логисты</li>
+                <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-brand-50 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="users" class="w-6 h-6 text-brand-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-corporate-900 mb-4">Наша команда</h3>
+                    <ul class="space-y-3 text-slate-600">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-500 shrink-0 mt-0.5"></i>
+                            <span>Профессиональные инженеры</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-500 shrink-0 mt-0.5"></i>
+                            <span>Квалифицированные электрики</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-500 shrink-0 mt-0.5"></i>
+                            <span>Инженеры систем отопления</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-500 shrink-0 mt-0.5"></i>
+                            <span>Монтажники-высотники и логисты</span>
+                        </li>
                     </ul>
                 </div>
 
                 <!-- Наши условия -->
-                <div class="flex flex-col items-center">
-                    <h3 class="text-2xl font-bold text-corporate-900 mb-6">Наши условия</h3>
-                    <ul class="list-disc pl-5 space-y-3 text-slate-700">
-                        <li>Безопасность</li>
-                        <li>Доступные цены</li>
-                        <li>Работа отрасли более 50 лет</li>
-                        <li>Оригинальное оборудование</li>
+                <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-brand-50 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="shield-check" class="w-6 h-6 text-brand-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-corporate-900 mb-4">Наши условия</h3>
+                    <ul class="space-y-3 text-slate-600">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-500 shrink-0 mt-0.5"></i>
+                            <span>Полная безопасность работ</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-500 shrink-0 mt-0.5"></i>
+                            <span>Доступные и прозрачные цены</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-500 shrink-0 mt-0.5"></i>
+                            <span>Опыт в отрасли более 50 лет</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-500 shrink-0 mt-0.5"></i>
+                            <span>Гарантия на всё оборудование</span>
+                        </li>
                     </ul>
                 </div>
             </div>
