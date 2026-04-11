@@ -11,6 +11,26 @@ body {
     background-image: radial-gradient(circle at top right, #1e293b 0%, #0f172a 60%);
 }
 
+.hero-grid-pattern {
+    background-size: 40px 40px;
+    background-image: radial-gradient(circle, #ffffff 1px, transparent 1px);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
 /* Кастомный скроллбар */
 ::-webkit-scrollbar {
     width: 8px;
