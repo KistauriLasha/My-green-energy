@@ -26,6 +26,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // Инициализация иконок
     lucide.createIcons();
 
+    // Инициализация GLightbox
+    if (typeof GLightbox !== 'undefined') {
+        GLightbox({
+            selector: '.glightbox',
+            touchNavigation: true,
+            loop: true,
+            autoplayVideos: true
+        });
+    }
+
     // Мобильное меню
     const btn = document.getElementById('mobile-menu-btn');
     const menu = document.getElementById('mobile-menu');
