@@ -49,30 +49,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Аккордеон FAQ
-    const faqButtons = document.querySelectorAll('.faq-btn');
-    faqButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const content = btn.nextElementSibling;
-            const icon = btn.querySelector('[data-lucide="chevron-down"]');
-
-            // Переключение контента
-            content.classList.toggle('hidden');
-
-            // Поворот иконки
-            if (icon) {
-                icon.style.transform = content.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
-            }
-
-            // Закрытие других открытых элементов (опционально)
-            faqButtons.forEach(otherBtn => {
-                if (otherBtn !== btn) {
-                    const otherContent = otherBtn.nextElementSibling;
-                    const otherIcon = otherBtn.querySelector('[data-lucide="chevron-down"]');
-                    otherContent.classList.add('hidden');
-                    if (otherIcon) otherIcon.style.transform = 'rotate(0deg)';
-                }
-            });
-        });
-    });
 });
