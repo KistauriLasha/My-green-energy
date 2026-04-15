@@ -26,7 +26,7 @@
 <body class="bg-slate-50 text-slate-800">
 
     <!-- Навигация (Header) -->
-    <header class="fixed w-full z-50 bg-white border-b border-slate-200 shadow-sm">
+    <header id="main-header" class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <!-- Логотип -->
@@ -96,7 +96,7 @@
                     <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
                     Работаем по всей Абхазии
                 </div>
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight mb-6 tracking-tight">
                     Бесперебойное электричество <br class="hidden lg:block" />и независимость от городских сетей
                 </h1>
                 <p class="text-lg sm:text-xl text-slate-300 mb-10 max-w-2xl leading-relaxed">
@@ -112,6 +112,12 @@
         
         <div class="absolute top-0 right-0 -translate-y-1/4 translate-x-1/4 w-[800px] h-[800px] border border-slate-700/30 rounded-full pointer-events-none"></div>
         <div class="absolute top-0 right-0 -translate-y-1/4 translate-x-1/4 w-[600px] h-[600px] border border-slate-700/50 rounded-full pointer-events-none"></div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce opacity-50 hover:opacity-100 transition-opacity">
+            <span class="text-[10px] uppercase tracking-[0.2em] font-medium">Листайте вниз</span>
+            <i data-lucide="chevron-down" class="w-5 h-5"></i>
+        </div>
     </section>
 
     <!-- Информационная полоса -->
@@ -131,7 +137,7 @@
     </div>
 
     <!-- Раздел Услуги (Комплекты) -->
-    <section id="services" class="py-24 bg-slate-50">
+    <section id="services" class="py-24 bg-slate-50 reveal">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <h2 class="text-3xl font-bold text-corporate-900 mb-4">Готовые комплекты оборудования</h2>
@@ -141,7 +147,7 @@
 
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Комплект 1 -->
-                <div class="bg-white p-8 border border-slate-100 rounded-2xl hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group text-center relative overflow-hidden">
+                <div class="bg-white p-8 border border-slate-100 rounded-2xl shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group text-center relative">
                     <div class="w-16 h-16 bg-brand-50 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:bg-brand-600 transition-colors duration-300">
                         <i data-lucide="battery" class="w-8 h-8 text-brand-600 group-hover:text-white transition-colors duration-300"></i>
                     </div>
@@ -151,14 +157,19 @@
                         <p class="font-bold text-lg text-corporate-900 leading-tight">5 кВт</p>
                         <p class="text-slate-500 text-sm italic">от городской сети</p>
                     </div>
+                    <ul class="text-left space-y-2 mb-8 text-sm text-slate-600 max-w-[200px] mx-auto">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-500"></i> Бесперебойная работа</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-500"></i> Гарантия на монтаж</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-500"></i> Сервисная поддержка</li>
+                    </ul>
                     <div class="pt-6 border-t border-slate-100">
                         <div class="text-3xl font-bold text-brand-600 tracking-tight">370 000  ₽ </div>
                     </div>
                 </div>
 
                 <!-- Комплект 2 -->
-                <div class="bg-white p-8 border-2 border-brand-500 rounded-2xl shadow-lg shadow-brand-500/10 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group text-center relative overflow-hidden scale-105 z-10">
-                    <div class="absolute top-0 right-0 bg-brand-500 text-white text-[10px] font-bold px-4 py-1 uppercase tracking-widest rounded-bl-lg">
+                <div class="bg-white p-8 border-2 border-brand-500 rounded-2xl shadow-xl shadow-brand-500/10 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group text-center relative md:scale-105 z-10">
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-brand-600 to-emerald-500 px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider text-white shadow-lg shadow-brand-500/25 whitespace-nowrap">
                         Популярный выбор
                     </div>
                     <div class="w-16 h-16 bg-brand-50 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:bg-brand-600 transition-colors duration-300">
@@ -170,13 +181,18 @@
                         <p class="font-bold text-lg text-corporate-900 leading-tight">5 кВт</p>
                         <p class="text-slate-500 text-sm italic">от сети и солнца</p>
                     </div>
+                    <ul class="text-left space-y-2 mb-8 text-sm text-slate-600 max-w-[200px] mx-auto">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-500"></i> Энергонезависимость</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-500"></i> Гарантия на монтаж</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-500"></i> Сервисная поддержка</li>
+                    </ul>
                     <div class="pt-6 border-t border-slate-100">
                         <div class="text-3xl font-bold text-brand-600 tracking-tight">500 000  ₽ </div>
                     </div>
                 </div>
 
                 <!-- Комплект 3 -->
-                <div class="bg-white p-8 border border-slate-100 rounded-2xl hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group text-center relative overflow-hidden">
+                <div class="bg-white p-8 border border-slate-100 rounded-2xl shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group text-center relative">
                     <div class="w-16 h-16 bg-brand-50 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:bg-brand-600 transition-colors duration-300">
                         <i data-lucide="zap" class="w-8 h-8 text-brand-600 group-hover:text-white transition-colors duration-300"></i>
                     </div>
@@ -186,6 +202,11 @@
                         <p class="font-bold text-lg text-corporate-900 leading-tight">10 кВт</p>
                         <p class="text-slate-500 text-sm italic">от сети и солнца</p>
                     </div>
+                    <ul class="text-left space-y-2 mb-8 text-sm text-slate-600 max-w-[200px] mx-auto">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-500"></i> Максимальная мощность</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-500"></i> Гарантия на монтаж</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-500"></i> Сервисная поддержка</li>
+                    </ul>
                     <div class="pt-6 border-t border-slate-100">
                         <div class="text-3xl font-bold text-brand-600 tracking-tight">980 000  ₽ </div>
                     </div>
@@ -196,7 +217,7 @@
     </section>
 
     <!-- Раздел Галерея -->
-    <section id="gallery" class="py-24 bg-white overflow-hidden">
+    <section id="gallery" class="py-24 bg-white overflow-hidden reveal">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-12">
                 <h2 class="text-3xl font-bold text-corporate-900 mb-4">Наши работы и оборудование</h2>
@@ -278,7 +299,7 @@
     </section>
 
     <!-- Раздел Этапы работы -->
-    <section id="steps" class="py-24 bg-white border-y border-slate-200">
+    <section id="steps" class="py-24 bg-white border-y border-slate-200 reveal">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <h2 class="text-3xl font-bold text-corporate-900 mb-4">Этапы работы</h2>
@@ -286,50 +307,55 @@
                 <p class="text-slate-600 text-lg">Мы сопровождаем вас на каждом этапе — от первой консультации до сервисного обслуживания готовой системы.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-5 gap-8 relative">
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-12 relative">
                 <!-- Линия соединения (только для десктопа) -->
-                <div class="hidden md:block absolute top-1/4 left-0 right-0 h-0.5 bg-slate-100 -z-10"></div>
+                <div class="hidden md:block absolute top-[32px] left-0 right-0 h-px border-t-2 border-dashed border-slate-200 -z-10"></div>
 
                 <!-- Этап 1 -->
-                <div class="flex flex-col items-center text-center">
-                    <div class="w-16 h-16 bg-brand-50 rounded-full flex items-center justify-center mb-6 border-4 border-white shadow-sm">
-                        <i data-lucide="clipboard-list" class="w-7 h-7 text-brand-600"></i>
+                <div class="flex flex-col items-center text-center relative group">
+                    <span class="absolute -top-8 -left-4 text-7xl font-black text-slate-200/40 select-none pointer-events-none -z-10 group-hover:text-brand-100 transition-colors duration-500">01</span>
+                    <div class="w-16 h-16 bg-brand-50 rounded-full flex items-center justify-center mb-6 border-4 border-white shadow-sm group-hover:bg-brand-600 transition-colors duration-300">
+                        <i data-lucide="clipboard-list" class="w-7 h-7 text-brand-600 group-hover:text-white transition-colors duration-300"></i>
                     </div>
                     <h3 class="font-bold text-corporate-900 mb-2">Заявка и консультация</h3>
                     <p class="text-sm text-slate-500">Обсуждаем ваши потребности и подбираем предварительное решение.</p>
                 </div>
 
                 <!-- Этап 2 -->
-                <div class="flex flex-col items-center text-center">
-                    <div class="w-16 h-16 bg-brand-50 rounded-full flex items-center justify-center mb-6 border-4 border-white shadow-sm">
-                        <i data-lucide="ruler" class="w-7 h-7 text-brand-600"></i>
+                <div class="flex flex-col items-center text-center relative group">
+                    <span class="absolute -top-8 -left-4 text-7xl font-black text-slate-200/40 select-none pointer-events-none -z-10 group-hover:text-brand-100 transition-colors duration-500">02</span>
+                    <div class="w-16 h-16 bg-brand-50 rounded-full flex items-center justify-center mb-6 border-4 border-white shadow-sm group-hover:bg-brand-600 transition-colors duration-300">
+                        <i data-lucide="ruler" class="w-7 h-7 text-brand-600 group-hover:text-white transition-colors duration-300"></i>
                     </div>
                     <h3 class="font-bold text-corporate-900 mb-2">Технический аудит</h3>
                     <p class="text-sm text-slate-500">Выезд инженера на объект для замеров и оценки условий монтажа.</p>
                 </div>
 
                 <!-- Этап 3 -->
-                <div class="flex flex-col items-center text-center">
-                    <div class="w-16 h-16 bg-brand-50 rounded-full flex items-center justify-center mb-6 border-4 border-white shadow-sm">
-                        <i data-lucide="file-text" class="w-7 h-7 text-brand-600"></i>
+                <div class="flex flex-col items-center text-center relative group">
+                    <span class="absolute -top-8 -left-4 text-7xl font-black text-slate-200/40 select-none pointer-events-none -z-10 group-hover:text-brand-100 transition-colors duration-500">03</span>
+                    <div class="w-16 h-16 bg-brand-50 rounded-full flex items-center justify-center mb-6 border-4 border-white shadow-sm group-hover:bg-brand-600 transition-colors duration-300">
+                        <i data-lucide="file-text" class="w-7 h-7 text-brand-600 group-hover:text-white transition-colors duration-300"></i>
                     </div>
                     <h3 class="font-bold text-corporate-900 mb-2">Договор и проект</h3>
                     <p class="text-sm text-slate-500">Заключаем официальный договор и готовим проектную документацию.</p>
                 </div>
 
                 <!-- Этап 4 -->
-                <div class="flex flex-col items-center text-center">
-                    <div class="w-16 h-16 bg-brand-50 rounded-full flex items-center justify-center mb-6 border-4 border-white shadow-sm">
-                        <i data-lucide="hard-hat" class="w-7 h-7 text-brand-600"></i>
+                <div class="flex flex-col items-center text-center relative group">
+                    <span class="absolute -top-8 -left-4 text-7xl font-black text-slate-200/40 select-none pointer-events-none -z-10 group-hover:text-brand-100 transition-colors duration-500">04</span>
+                    <div class="w-16 h-16 bg-brand-50 rounded-full flex items-center justify-center mb-6 border-4 border-white shadow-sm group-hover:bg-brand-600 transition-colors duration-300">
+                        <i data-lucide="hard-hat" class="w-7 h-7 text-brand-600 group-hover:text-white transition-colors duration-300"></i>
                     </div>
                     <h3 class="font-bold text-corporate-900 mb-2">Монтаж и запуск</h3>
                     <p class="text-sm text-slate-500">Профессиональная установка оборудования и пусконаладка системы.</p>
                 </div>
 
                 <!-- Этап 5 -->
-                <div class="flex flex-col items-center text-center">
-                    <div class="w-16 h-16 bg-brand-50 rounded-full flex items-center justify-center mb-6 border-4 border-white shadow-sm">
-                        <i data-lucide="wrench" class="w-7 h-7 text-brand-600"></i>
+                <div class="flex flex-col items-center text-center relative group">
+                    <span class="absolute -top-8 -left-4 text-7xl font-black text-slate-200/40 select-none pointer-events-none -z-10 group-hover:text-brand-100 transition-colors duration-500">05</span>
+                    <div class="w-16 h-16 bg-brand-50 rounded-full flex items-center justify-center mb-6 border-4 border-white shadow-sm group-hover:bg-brand-600 transition-colors duration-300">
+                        <i data-lucide="wrench" class="w-7 h-7 text-brand-600 group-hover:text-white transition-colors duration-300"></i>
                     </div>
                     <h3 class="font-bold text-corporate-900 mb-2">Обслуживание</h3>
                     <p class="text-sm text-slate-500">Обеспечиваем гарантийную поддержку и сервисное обслуживание.</p>
@@ -339,7 +365,7 @@
     </section>
 
     <!-- Раздел О нас -->
-    <section id="about" class="py-24 bg-slate-50">
+    <section id="about" class="py-24 bg-slate-50 reveal">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-4xl mx-auto mb-16">
                 <h2 class="text-3xl font-bold text-corporate-900 mb-6">О нас</h2>

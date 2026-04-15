@@ -49,4 +49,35 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Intersection Observer для анимаций появления
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('reveal-active');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    // Эффект скролла для хедера
+    const header = document.getElementById('main-header');
+    if (header) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                header.classList.add('bg-white', 'shadow-md');
+                header.classList.remove('bg-white/80', 'backdrop-blur-md');
+            } else {
+                header.classList.remove('bg-white', 'shadow-md');
+                header.classList.add('bg-white/80', 'backdrop-blur-md');
+            }
+        });
+    }
+
 });
