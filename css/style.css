@@ -7,8 +7,21 @@ body {
 
 /* Строгий градиент для главного экрана */
 .hero-bg {
+    position: relative;
     background-color: #0d1a16;
     background-image: radial-gradient(circle at top right, #1a332c 0%, #0d1a16 60%);
+}
+
+.hero-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('../img/gallery/0.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;
+    mix-blend-mode: overlay;
+    pointer-events: none;
 }
 
 .hero-grid-pattern {
@@ -52,4 +65,16 @@ body {
 .no-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
+}
+
+/* Анимации появления */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-active {
+    opacity: 1;
+    transform: translateY(0);
 }
