@@ -23,32 +23,36 @@
     <script src="js/glightbox.min.js" defer></script>
     <script src="js/script.js" defer></script>
 </head>
-<body class="bg-corporate-950 text-slate-800">
+<body class="bg-corporate-950 text-slate-800 antialiased selection:bg-brand-500 selection:text-white">
 
     <!-- Навигация (Header) -->
-    <header class="fixed w-full z-50 bg-white border-b border-slate-200 shadow-sm">
+    <header class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200/80 shadow-sm transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <!-- Логотип -->
-                <a href="#" class="flex-shrink-0 flex items-center gap-3 hover:opacity-80 transition-opacity">
-                    <img src="img/logo.png" alt="Мой Зелёный дом Logo" class="w-12 h-12">
+                <a href="#" class="flex-shrink-0 flex items-center gap-3.5 hover:opacity-90 transition-opacity group">
+                    <div class="relative">
+                        <img src="img/logo.png" alt="Мой Зелёный дом Logo" class="w-11 h-11 object-contain transition-transform group-hover:scale-105 duration-300">
+                    </div>
                     <span class="font-bold text-xl tracking-tight text-corporate-900">Мой Зелёный дом</span>
                 </a>
 
                 <!-- Десктопное меню -->
-                <nav class="hidden md:flex space-x-8">
-                    <a href="#services" class="text-slate-600 hover:text-brand-600 font-medium transition-colors text-sm uppercase tracking-wide">Комплекты</a>
-                    <a href="#steps" class="text-slate-600 hover:text-brand-600 font-medium transition-colors text-sm uppercase tracking-wide">Этапы</a>
-                    <a href="#about" class="text-slate-600 hover:text-brand-600 font-medium transition-colors text-sm uppercase tracking-wide">О нас</a>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#services" class="text-slate-600 hover:text-brand-600 font-semibold transition-colors text-xs uppercase tracking-wider">Комплекты</a>
+                    <a href="#steps" class="text-slate-600 hover:text-brand-600 font-semibold transition-colors text-xs uppercase tracking-wider">Этапы</a>
+                    <a href="#about" class="text-slate-600 hover:text-brand-600 font-semibold transition-colors text-xs uppercase tracking-wider">О нас</a>
                 </nav>
 
                 <!-- Контакты (Десктоп) -->
-                <div class="hidden lg:flex items-center gap-6">
-                    <a href="tel:+79407770774" class="text-corporate-900 font-bold hover:text-brand-600 transition-colors flex items-center gap-2">
-                        <i data-lucide="phone" class="w-4 h-4 text-brand-600"></i>
+                <div class="hidden lg:flex items-center gap-5">
+                    <a href="tel:+79407770774" class="text-corporate-900 font-bold hover:text-brand-600 transition-colors flex items-center gap-2 text-sm">
+                        <span class="w-8 h-8 rounded-full bg-brand-50 flex items-center justify-center text-brand-600">
+                            <i data-lucide="phone" class="w-4 h-4"></i>
+                        </span>
                         +7 (940) 777-07-74
                     </a>
-                    <a href="https://wa.me/79407770774" target="_blank" class="flex items-center gap-2 bg-emerald-500 text-white px-4 py-2 rounded-sm hover:bg-emerald-600 transition-colors text-sm font-semibold shadow-sm">
+                    <a href="https://wa.me/79407770774" target="_blank" class="flex items-center gap-2 bg-emerald-500 text-white px-4 py-2.5 rounded-xl hover:bg-emerald-600 transition-all duration-300 text-sm font-semibold shadow-md shadow-emerald-500/20 hover:shadow-emerald-500/30 hover:-translate-y-0.5">
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                         WhatsApp
                     </a>
@@ -56,7 +60,7 @@
 
                 <!-- Кнопка мобильного меню -->
                 <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-corporate-900 focus:outline-none p-2">
+                    <button id="mobile-menu-btn" class="text-slate-700 hover:text-corporate-900 p-2 rounded-lg hover:bg-slate-100 transition-colors">
                         <i data-lucide="menu" class="w-6 h-6"></i>
                     </button>
                 </div>
@@ -64,20 +68,22 @@
         </div>
 
         <!-- Мобильное меню -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 shadow-lg">
-            <div class="px-4 pt-2 pb-6 space-y-1">
-                <a href="#services" class="block px-3 py-3 text-base font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-50">Комплекты</a>
-                <a href="#steps" class="block px-3 py-3 text-base font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-50">Этапы работы</a>
-                <a href="#about" class="block px-3 py-3 text-base font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-50">О нас</a>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 shadow-xl">
+            <div class="px-4 pt-3 pb-6 space-y-1">
+                <a href="#services" class="block px-4 py-3 text-base font-semibold text-slate-700 rounded-xl hover:text-brand-600 hover:bg-slate-50 transition-colors">Комплекты</a>
+                <a href="#steps" class="block px-4 py-3 text-base font-semibold text-slate-700 rounded-xl hover:text-brand-600 hover:bg-slate-50 transition-colors">Этапы работы</a>
+                <a href="#about" class="block px-4 py-3 text-base font-semibold text-slate-700 rounded-xl hover:text-brand-600 hover:bg-slate-50 transition-colors">О нас</a>
             </div>
 
             <!-- Контакты в мобильном меню -->
             <div class="px-4 py-6 border-t border-slate-100 bg-slate-50 space-y-4">
-                <a href="tel:+79407770774" class="flex items-center gap-3 text-corporate-900 font-bold text-lg">
-                    <i data-lucide="phone" class="w-5 h-5 text-brand-600"></i>
+                <a href="tel:+79407770774" class="flex items-center gap-3 text-corporate-900 font-bold text-lg px-2">
+                    <span class="w-9 h-9 rounded-full bg-brand-100 text-brand-600 flex items-center justify-center">
+                        <i data-lucide="phone" class="w-5 h-5"></i>
+                    </span>
                     +7 (940) 777-07-74
                 </a>
-                <a href="https://wa.me/79407770774" target="_blank" class="flex items-center justify-center gap-2 bg-emerald-500 text-white w-full py-3 rounded-sm font-semibold shadow-sm hover:bg-emerald-600 transition-colors">
+                <a href="https://wa.me/79407770774" target="_blank" class="flex items-center justify-center gap-2 bg-emerald-500 text-white w-full py-3.5 rounded-xl font-semibold shadow-md hover:bg-emerald-600 transition-colors">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                     Написать в WhatsApp
                 </a>
@@ -87,44 +93,45 @@
 
     <!-- Главный экран (Hero) -->
     <section class="pt-32 pb-20 lg:pt-48 lg:pb-32 hero-bg text-white relative overflow-hidden">
-        <!-- Декоративная сетка -->
+        <!-- Декоративная сетка и атмосферный glow -->
         <div class="absolute inset-0 hero-grid-pattern opacity-10 pointer-events-none"></div>
+        <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] hero-glow pointer-events-none rounded-full"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="max-w-3xl animate-fade-in-up">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 backdrop-blur-md border border-white/10 text-sm font-medium mb-6 hover:bg-white/10 transition-colors cursor-default">
-                    <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
+                <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-400 text-sm font-semibold mb-8 backdrop-blur-md">
+                    <span class="w-2.5 h-2.5 rounded-full bg-brand-500 animate-pulse"></span>
                     Работаем по всей Абхазии
                 </div>
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-                    Бесперебойное электричество <br class="hidden lg:block" />и независимость от городских сетей
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.15] mb-6 tracking-tight">
+                    Бесперебойное электричество <br class="hidden lg:block" /><span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-500 via-emerald-400 to-teal-300">и независимость</span> от сетей
                 </h1>
-                <p class="text-lg sm:text-xl text-slate-300 mb-10 max-w-2xl leading-relaxed">
+                <p class="text-lg sm:text-xl text-slate-300 mb-10 max-w-2xl leading-relaxed font-normal">
                     Проектирование и установка солнечных электростанций, инверторов и аккумуляторов для частных домов и бизнеса по всей Абхазии. Надежное оборудование и монтаж «под ключ».
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="#services" class="bg-brand-600 text-white text-center px-8 py-4 rounded-sm font-semibold text-lg hover:bg-brand-500 hover:scale-[1.02] transition-all duration-300 shadow-lg shadow-brand-600/30">
+                    <a href="#services" class="bg-brand-600 text-white text-center px-8 py-4 rounded-xl font-semibold text-lg hover:bg-brand-500 hover:-translate-y-0.5 transition-all duration-300 shadow-lg shadow-brand-600/30 hover:shadow-brand-500/50">
                         Изучить комплекты
                     </a>
                 </div>
             </div>
         </div>
         
-        <div class="absolute top-0 right-0 -translate-y-1/4 translate-x-1/4 w-[800px] h-[800px] border border-slate-700/30 rounded-full pointer-events-none"></div>
-        <div class="absolute top-0 right-0 -translate-y-1/4 translate-x-1/4 w-[600px] h-[600px] border border-slate-700/50 rounded-full pointer-events-none"></div>
+        <div class="absolute top-0 right-0 -translate-y-1/4 translate-x-1/4 w-[800px] h-[800px] border border-slate-700/20 rounded-full pointer-events-none"></div>
+        <div class="absolute top-0 right-0 -translate-y-1/4 translate-x-1/4 w-[600px] h-[600px] border border-slate-700/40 rounded-full pointer-events-none"></div>
     </section>
 
     <!-- Информационная полоса -->
-    <div class="bg-corporate-950 border-t border-slate-800 py-6 reveal">
+    <div class="bg-corporate-950 border-t border-slate-800/80 py-8 reveal">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-center md:divide-x divide-slate-800">
-                <div class="px-4">
-                    <div class="text-2xl font-bold text-white mb-1">100+</div>
-                    <div class="text-sm text-slate-400">Успешных проектов</div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-center">
+                <div class="border border-slate-800/80 bg-slate-900/40 rounded-2xl p-6 backdrop-blur-sm">
+                    <div class="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-brand-500 to-emerald-400 mb-2">100+</div>
+                    <div class="text-sm font-medium text-slate-300">Успешных проектов</div>
                 </div>
-                <div class="px-4">
-                    <div class="text-2xl font-bold text-white mb-1">Гарантия</div>
-                    <div class="text-sm text-slate-400">На оборудование и монтаж</div>
+                <div class="border border-slate-800/80 bg-slate-900/40 rounded-2xl p-6 backdrop-blur-sm">
+                    <div class="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-brand-500 to-emerald-400 mb-2">Гарантия</div>
+                    <div class="text-sm font-medium text-slate-300">На оборудование и монтаж</div>
                 </div>
             </div>
         </div>
@@ -134,63 +141,69 @@
     <section id="services" class="py-24 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16 reveal">
-                <h2 class="text-3xl font-bold text-corporate-900 mb-4">Готовые комплекты оборудования</h2>
-                <div class="w-16 h-1 bg-brand-600 mx-auto mb-6"></div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-corporate-900 mb-4 tracking-tight">Готовые комплекты оборудования</h2>
+                <div class="w-16 h-1.5 bg-brand-600 rounded-full mx-auto mb-6"></div>
                 <p class="text-slate-600 text-lg">Подберите оптимальное решение для вашего дома или бизнеса. Мы предлагаем проверенные конфигурации оборудования «под ключ».</p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8">
+            <div class="grid md:grid-cols-3 gap-8 items-stretch">
                 <!-- Комплект 1 -->
-                <div class="bg-white p-8 border border-slate-100 rounded-2xl hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group text-center relative overflow-hidden reveal">
-                    <div class="w-16 h-16 bg-brand-50 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:bg-brand-600 transition-colors duration-300">
-                        <i data-lucide="battery" class="w-8 h-8 text-brand-600 group-hover:text-white transition-colors duration-300"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-corporate-900 mb-6 pb-4 border-b border-slate-100 uppercase tracking-wider">Комплект 1</h3>
-                    <div class="space-y-4 mb-8">
-                        <p class="font-bold text-lg text-corporate-900 leading-tight">Бесперебойное питание</p>
-                        <p class="font-bold text-lg text-corporate-900 leading-tight">5 кВт</p>
-                        <p class="text-slate-500 text-sm italic">от городской сети</p>
+                <div class="bg-white p-8 border border-slate-200/80 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group text-center relative flex flex-col justify-between reveal">
+                    <div>
+                        <div class="w-16 h-16 bg-brand-50 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:bg-brand-600 transition-colors duration-300">
+                            <i data-lucide="battery" class="w-8 h-8 text-brand-600 group-hover:text-white transition-colors duration-300"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-corporate-900 mb-6 pb-4 border-b border-slate-100 uppercase tracking-wider">Комплект 1</h3>
+                        <div class="space-y-4 mb-8">
+                            <p class="font-bold text-lg text-corporate-900 leading-tight text-center">Бесперебойное питание</p>
+                            <p class="font-bold text-lg text-corporate-900 leading-tight text-center">5 кВт</p>
+                            <p class="text-slate-500 text-sm italic text-center">от городской сети</p>
+                        </div>
                     </div>
                     <div class="pt-6 border-t border-slate-100">
-                        <div class="text-3xl font-bold text-brand-600 tracking-tight mb-4">370 000  ₽ </div>
-                        <button type="button" data-order-kit="Комплект 1 — Бесперебойное питание 5 кВт (370 000 ₽)" class="w-full bg-brand-600 text-white py-3 rounded-xl font-semibold hover:bg-brand-500 transition-colors">Заказать</button>
+                        <div class="text-3xl font-extrabold text-brand-600 tracking-tight mb-4">370 000  ₽</div>
+                        <button type="button" data-order-kit="Комплект 1 — Бесперебойное питание 5 кВт (370 000 ₽)" class="w-full bg-brand-600 text-white py-3.5 rounded-xl font-semibold hover:bg-brand-500 transition-colors shadow-md shadow-brand-600/20">Заказать</button>
                     </div>
                 </div>
 
                 <!-- Комплект 2 -->
-                <div class="bg-white p-8 border-2 border-brand-500 rounded-2xl shadow-lg shadow-brand-500/10 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group text-center relative overflow-hidden scale-105 z-10 reveal">
-                    <div class="absolute top-0 right-0 bg-brand-500 text-white text-[10px] font-bold px-4 py-1 uppercase tracking-widest rounded-bl-lg">
+                <div class="bg-white p-8 border-2 border-brand-500 rounded-2xl shadow-xl shadow-brand-500/10 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group text-center relative flex flex-col justify-between md:-translate-y-2 z-10 reveal">
+                    <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-brand-500 text-white text-xs font-extrabold px-4 py-1 uppercase tracking-widest rounded-full shadow-md">
                         Популярный выбор
                     </div>
-                    <div class="w-16 h-16 bg-brand-50 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:bg-brand-600 transition-colors duration-300">
-                        <i data-lucide="sun" class="w-8 h-8 text-brand-600 group-hover:text-white transition-colors duration-300"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-corporate-900 mb-6 pb-4 border-b border-slate-100 uppercase tracking-wider">Комплект 2</h3>
-                    <div class="space-y-4 mb-8">
-                        <p class="font-bold text-lg text-corporate-900 leading-tight">Солнечная энергия</p>
-                        <p class="font-bold text-lg text-corporate-900 leading-tight">5 кВт</p>
-                        <p class="text-slate-500 text-sm italic">от сети и солнца</p>
+                    <div>
+                        <div class="w-16 h-16 bg-brand-50 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:bg-brand-600 transition-colors duration-300">
+                            <i data-lucide="sun" class="w-8 h-8 text-brand-600 group-hover:text-white transition-colors duration-300"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-corporate-900 mb-6 pb-4 border-b border-slate-100 uppercase tracking-wider">Комплект 2</h3>
+                        <div class="space-y-4 mb-8">
+                            <p class="font-bold text-lg text-corporate-900 leading-tight text-center">Солнечная энергия</p>
+                            <p class="font-bold text-lg text-corporate-900 leading-tight text-center">5 кВт</p>
+                            <p class="text-slate-500 text-sm italic text-center">от сети и солнца</p>
+                        </div>
                     </div>
                     <div class="pt-6 border-t border-slate-100">
-                        <div class="text-3xl font-bold text-brand-600 tracking-tight mb-4">500 000  ₽ </div>
-                        <button type="button" data-order-kit="Комплект 2 — Солнечная энергия 5 кВт (500 000 ₽)" class="w-full bg-brand-600 text-white py-3 rounded-xl font-semibold hover:bg-brand-500 transition-colors">Заказать</button>
+                        <div class="text-3xl font-extrabold text-brand-600 tracking-tight mb-4">500 000  ₽</div>
+                        <button type="button" data-order-kit="Комплект 2 — Солнечная энергия 5 кВт (500 000 ₽)" class="w-full bg-brand-600 text-white py-3.5 rounded-xl font-semibold hover:bg-brand-500 transition-colors shadow-lg shadow-brand-600/30">Заказать</button>
                     </div>
                 </div>
 
                 <!-- Комплект 3 -->
-                <div class="bg-white p-8 border border-slate-100 rounded-2xl hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group text-center relative overflow-hidden reveal">
-                    <div class="w-16 h-16 bg-brand-50 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:bg-brand-600 transition-colors duration-300">
-                        <i data-lucide="zap" class="w-8 h-8 text-brand-600 group-hover:text-white transition-colors duration-300"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-corporate-900 mb-6 pb-4 border-b border-slate-100 uppercase tracking-wider">Комплект 3</h3>
-                    <div class="space-y-4 mb-8">
-                        <p class="font-bold text-lg text-corporate-900 leading-tight">Солнечная энергия</p>
-                        <p class="font-bold text-lg text-corporate-900 leading-tight">10 кВт</p>
-                        <p class="text-slate-500 text-sm italic">от сети и солнца</p>
+                <div class="bg-white p-8 border border-slate-200/80 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group text-center relative flex flex-col justify-between reveal">
+                    <div>
+                        <div class="w-16 h-16 bg-brand-50 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:bg-brand-600 transition-colors duration-300">
+                            <i data-lucide="zap" class="w-8 h-8 text-brand-600 group-hover:text-white transition-colors duration-300"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-corporate-900 mb-6 pb-4 border-b border-slate-100 uppercase tracking-wider">Комплект 3</h3>
+                        <div class="space-y-4 mb-8">
+                            <p class="font-bold text-lg text-corporate-900 leading-tight text-center">Солнечная энергия</p>
+                            <p class="font-bold text-lg text-corporate-900 leading-tight text-center">10 кВт</p>
+                            <p class="text-slate-500 text-sm italic text-center">от сети и солнца</p>
+                        </div>
                     </div>
                     <div class="pt-6 border-t border-slate-100">
-                        <div class="text-3xl font-bold text-brand-600 tracking-tight mb-4">980 000  ₽ </div>
-                        <button type="button" data-order-kit="Комплект 3 — Солнечная энергия 10 кВт (980 000 ₽)" class="w-full bg-brand-600 text-white py-3 rounded-xl font-semibold hover:bg-brand-500 transition-colors">Заказать</button>
+                        <div class="text-3xl font-extrabold text-brand-600 tracking-tight mb-4">980 000  ₽</div>
+                        <button type="button" data-order-kit="Комплект 3 — Солнечная энергия 10 кВт (980 000 ₽)" class="w-full bg-brand-600 text-white py-3.5 rounded-xl font-semibold hover:bg-brand-500 transition-colors shadow-md shadow-brand-600/20">Заказать</button>
                     </div>
                 </div>
             </div>
@@ -201,141 +214,157 @@
     <!-- Раздел Галерея -->
     <section id="gallery" class="py-24 bg-white overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-12 reveal">
-                <h2 class="text-3xl font-bold text-corporate-900 mb-4">Наши работы и оборудование</h2>
-                <div class="w-16 h-1 bg-brand-600 mx-auto"></div>
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 reveal">
+                <div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-corporate-900 mb-4 tracking-tight">Наши работы и оборудование</h2>
+                    <div class="w-16 h-1.5 bg-brand-600 rounded-full"></div>
+                </div>
+                <!-- Кнопки навигации для десктопа -->
+                <div class="hidden md:flex items-center gap-3 mt-6 md:mt-0">
+                    <button id="gallery-prev" type="button" class="w-11 h-11 rounded-full border border-slate-200 flex items-center justify-center text-slate-600 hover:bg-brand-600 hover:text-white hover:border-brand-600 transition-all shadow-sm">
+                        <i data-lucide="chevron-left" class="w-5 h-5"></i>
+                    </button>
+                    <button id="gallery-next" type="button" class="w-11 h-11 rounded-full border border-slate-200 flex items-center justify-center text-slate-600 hover:bg-brand-600 hover:text-white hover:border-brand-600 transition-all shadow-sm">
+                        <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                    </button>
+                </div>
             </div>
 
             <div class="relative reveal">
-                <div class="flex overflow-x-auto pb-8 gap-4 snap-x cursor-grab active:cursor-grabbing no-scrollbar">
-                    <a href="img/gallery/1.png" class="glightbox flex-shrink-0 w-72 h-48 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow snap-start" data-gallery="gallery1" data-title="Инвертор — это настенный прибор, который за миллисекунды переключает электричество на резервное питание. Техника даже не замечает — всё работает как обычно.">
-                        <img src="img/gallery/1.png" alt="Инвертор" class="w-full h-full object-cover">
+                <div id="gallery-scroll" class="flex overflow-x-auto pb-8 gap-5 snap-x cursor-grab active:cursor-grabbing no-scrollbar smooth-scroll-x">
+                    <a href="img/gallery/1.png" class="glightbox flex-shrink-0 w-80 h-52 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 snap-start group relative" data-gallery="gallery1" data-title="Инвертор — это настенный прибор, который за миллисекунды переключает электричество на резервное питание. Техника даже не замечает — всё работает как обычно.">
+                        <img src="img/gallery/1.png" alt="Инвертор" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </a>
-                    <a href="img/gallery/0.jpg" class="glightbox flex-shrink-0 w-72 h-48 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow snap-start" data-gallery="gallery1" data-title="Солнечные панели — подключаются к инвертору. Это позволяет получать электричество от солнца, даже в пасмурную погоду. Срок службы панелей — 25–30 лет.">
-                        <img src="img/gallery/0.jpg" alt="Солнечные панели" class="w-full h-full object-cover">
+                    <a href="img/gallery/0.jpg" class="glightbox flex-shrink-0 w-80 h-52 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 snap-start group relative" data-gallery="gallery1" data-title="Солнечные панели — подключаются к инвертору. Это позволяет получать электричество от солнца, даже в пасмурную погоду. Срок службы панелей — 25–30 лет.">
+                        <img src="img/gallery/0.jpg" alt="Солнечные панели" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </a>
-                    <a href="img/gallery/2.jpg" class="glightbox flex-shrink-0 w-72 h-48 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow snap-start" data-gallery="gallery1" data-title="Мы единственные в Абхазии, кто уже много лет профессионально занимается установкой и обслуживанием солнечных электростанций.">
-                        <img src="img/gallery/2.jpg" alt="Профессиональный монтаж" class="w-full h-full object-cover">
+                    <a href="img/gallery/2.jpg" class="glightbox flex-shrink-0 w-80 h-52 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 snap-start group relative" data-gallery="gallery1" data-title="Мы единственные в Абхазии, кто уже много лет профессионально занимается установкой и обслуживанием солнечных электростанций.">
+                        <img src="img/gallery/2.jpg" alt="Профессиональный монтаж" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </a>
-                    <a href="img/gallery/3.jpg" class="glightbox flex-shrink-0 w-72 h-48 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow snap-start" data-gallery="gallery1" data-title="К инвертору подключаются аккумуляторы. Они хранят электричество и обеспечивают работу вашей техники, когда нет солнца или отключено городское питание.">
-                        <img src="img/gallery/3.jpg" alt="Аккумуляторы" class="w-full h-full object-cover">
+                    <a href="img/gallery/3.jpg" class="glightbox flex-shrink-0 w-80 h-52 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 snap-start group relative" data-gallery="gallery1" data-title="К инвертору подключаются аккумуляторы. Они хранят электричество и обеспечивают работу вашей техники, когда нет солнца или отключено городское питание.">
+                        <img src="img/gallery/3.jpg" alt="Аккумуляторы" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </a>
-                    <a href="img/gallery/7.jpg" class="glightbox flex-shrink-0 w-72 h-48 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow snap-start" data-gallery="gallery1" data-title="Мы устанавливаем солнечные панели на частные дома, многоквартирные здания и промышленные объекты любой сложности.">
-                        <img src="img/gallery/7.jpg" alt="Установка на крыше" class="w-full h-full object-cover">
+                    <a href="img/gallery/7.jpg" class="glightbox flex-shrink-0 w-80 h-52 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 snap-start group relative" data-gallery="gallery1" data-title="Мы устанавливаем солнечные панели на частные дома, многоквартирные здания и промышленные объекты любой сложности.">
+                        <img src="img/gallery/7.jpg" alt="Установка на крыше" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </a>
-                    <a href="img/gallery/4.png" class="glightbox flex-shrink-0 w-72 h-48 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow snap-start" data-gallery="gallery1" data-title="В случае отсутствия крыши, мы можем установить солнечные панели на специальный модульный каркас.">
-                        <img src="img/gallery/4.png" alt="Модульный каркас" class="w-full h-full object-cover">
+                    <a href="img/gallery/4.png" class="glightbox flex-shrink-0 w-80 h-52 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 snap-start group relative" data-gallery="gallery1" data-title="В случае отсутствия крыши, мы можем установить солнечные панели на специальный модульный каркас.">
+                        <img src="img/gallery/4.png" alt="Модульный каркас" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </a>
-                    <a href="img/gallery/12.jpg" class="glightbox flex-shrink-0 w-72 h-48 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow snap-start" data-gallery="gallery1" data-title="Аккумуляторы подбираются индивидуально для каждого клиента в зависимости от потребностей.">
-                        <img src="img/gallery/12.jpg" alt="Выбор аккумуляторов" class="w-full h-full object-cover">
+                    <a href="img/gallery/12.jpg" class="glightbox flex-shrink-0 w-80 h-52 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 snap-start group relative" data-gallery="gallery1" data-title="Аккумуляторы подбираются индивидуально для каждого клиента в зависимости от потребностей.">
+                        <img src="img/gallery/12.jpg" alt="Выбор аккумуляторов" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </a>
-                    <a href="img/gallery/5.jpg" class="glightbox flex-shrink-0 w-72 h-48 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow snap-start" data-gallery="gallery1" data-title="Наши бригады работают даже в самых отдалённых уголках Абхазии. Как в городе, так в сельской и горной местности.">
-                        <img src="img/gallery/5.jpg" alt="Работа в горах" class="w-full h-full object-cover">
+                    <a href="img/gallery/5.jpg" class="glightbox flex-shrink-0 w-80 h-52 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 snap-start group relative" data-gallery="gallery1" data-title="Наши бригады работают даже в самых отдалённых уголках Абхазии. Как в городе, так в сельской и горной местности.">
+                        <img src="img/gallery/5.jpg" alt="Работа в горах" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </a>
-                    <a href="img/gallery/6.jpg" class="glightbox flex-shrink-0 w-72 h-48 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow snap-start" data-gallery="gallery1" data-title="Солнечные панели защищены прочным закалённым стеклом от дождя, града и снега.">
-                        <img src="img/gallery/6.jpg" alt="Защита панелей" class="w-full h-full object-cover">
+                    <a href="img/gallery/6.jpg" class="glightbox flex-shrink-0 w-80 h-52 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 snap-start group relative" data-gallery="gallery1" data-title="Солнечные панели защищены прочным закалённым стеклом от дождя, града и снега.">
+                        <img src="img/gallery/6.jpg" alt="Защита панелей" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </a>
-                    <a href="img/gallery/9.png" class="glightbox flex-shrink-0 w-72 h-48 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow snap-start" data-gallery="gallery1" data-title="Мы можем обеспечить электричеством ваше предприятие и бизнес.">
-                        <img src="img/gallery/9.png" alt="Решения для бизнеса" class="w-full h-full object-cover">
+                    <a href="img/gallery/9.png" class="glightbox flex-shrink-0 w-80 h-52 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 snap-start group relative" data-gallery="gallery1" data-title="Мы можем обеспечить электричеством ваше предприятие и бизнес.">
+                        <img src="img/gallery/9.png" alt="Решения для бизнеса" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </a>
-                    <a href="img/gallery/19.jpg" class="glightbox flex-shrink-0 w-72 h-48 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow snap-start" data-gallery="gallery1" data-title="Наши системы легко расширяются. При необходимости можно увеличить ёмкость аккумуляторов или мощность инвертора.">
-                        <img src="img/gallery/19.jpg" alt="Масштабируемость" class="w-full h-full object-cover">
+                    <a href="img/gallery/19.jpg" class="glightbox flex-shrink-0 w-80 h-52 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 snap-start group relative" data-gallery="gallery1" data-title="Наши системы легко расширяются. При необходимости можно увеличить ёмкость аккумуляторов или мощность инвертора.">
+                        <img src="img/gallery/19.jpg" alt="Масштабируемость" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </a>
-                    <a href="img/gallery/13.jpg" class="glightbox flex-shrink-0 w-72 h-48 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow snap-start" data-gallery="gallery1" data-title="Доставка комплектов занимает от 7 до 10 дней. Монтаж — обычно от 4 часов до суток.">
-                        <img src="img/gallery/13.jpg" alt="Сроки монтажа" class="w-full h-full object-cover">
+                    <a href="img/gallery/13.jpg" class="glightbox flex-shrink-0 w-80 h-52 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 snap-start group relative" data-gallery="gallery1" data-title="Доставка комплектов занимает от 7 до 10 дней. Монтаж — обычно от 4 часов до суток.">
+                        <img src="img/gallery/13.jpg" alt="Сроки монтажа" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </a>
-                    <a href="img/gallery/14.jpg" class="glightbox flex-shrink-0 w-72 h-48 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow snap-start" data-gallery="gallery1" data-title="В Абхазии много солнечных дней в году, что позволяет эффективно использовать солнечную энергию.">
-                        <img src="img/gallery/14.jpg" alt="Солнечная Абхазия" class="w-full h-full object-cover">
+                    <a href="img/gallery/14.jpg" class="glightbox flex-shrink-0 w-80 h-52 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 snap-start group relative" data-gallery="gallery1" data-title="В Абхазии много солнечных дней в году, что позволяет эффективно использовать солнечную энергию.">
+                        <img src="img/gallery/14.jpg" alt="Солнечная Абхазия" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </a>
-                    <a href="img/gallery/20.jpg" class="glightbox flex-shrink-0 w-72 h-48 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow snap-start" data-gallery="gallery1" data-title="Наши системы безопасны. Аккумуляторы LFP не горят и обладают высокой надежностью.">
-                        <img src="img/gallery/20.jpg" alt="Безопасность систем" class="w-full h-full object-cover">
+                    <a href="img/gallery/20.jpg" class="glightbox flex-shrink-0 w-80 h-52 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 snap-start group relative" data-gallery="gallery1" data-title="Наши системы безопасны. Аккумуляторы LFP не горят и обладают высокой надежностью.">
+                        <img src="img/gallery/20.jpg" alt="Безопасность систем" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </a>
-                    <a href="img/gallery/8.jpg" class="glightbox flex-shrink-0 w-72 h-48 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow snap-start" data-gallery="gallery1" data-title="В будущем излишки энергии можно будет продавать в сеть (закон о «зелёном тарифе» в разработке).">
-                        <img src="img/gallery/8.jpg" alt="Экономическая выгода" class="w-full h-full object-cover">
+                    <a href="img/gallery/8.jpg" class="glightbox flex-shrink-0 w-80 h-52 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 snap-start group relative" data-gallery="gallery1" data-title="В будущем излишки энергии можно будет продавать в сеть (закон о «зелёном тарифе» в разработке).">
+                        <img src="img/gallery/8.jpg" alt="Экономическая выгода" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </a>
-                    <a href="img/gallery/17.jpg" class="glightbox flex-shrink-0 w-72 h-48 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow snap-start" data-gallery="gallery1" data-title="Система рассчитывается под ваши нужды: освещение, насосы, бытовая техника — всё будет работать.">
-                        <img src="img/gallery/17.jpg" alt="Автономный дом" class="w-full h-full object-cover">
+                    <a href="img/gallery/17.jpg" class="glightbox flex-shrink-0 w-80 h-52 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 snap-start group relative" data-gallery="gallery1" data-title="Система рассчитывается под ваши нужды: освещение, насосы, бытовая техника — всё будет работать.">
+                        <img src="img/gallery/17.jpg" alt="Автономный дом" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </a>
-                    <a href="img/gallery/23.jpg" class="glightbox flex-shrink-0 w-72 h-48 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow snap-start" data-gallery="gallery1" data-title="Для отопления используются специальные водяные солнечные коллекторы.">
-                        <img src="img/gallery/23.jpg" alt="Солнечное отопление" class="w-full h-full object-cover">
+                    <a href="img/gallery/23.jpg" class="glightbox flex-shrink-0 w-80 h-52 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 snap-start group relative" data-gallery="gallery1" data-title="Для отопления используются специальные водяные солнечные коллекторы.">
+                        <img src="img/gallery/23.jpg" alt="Солнечное отопление" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </a>
-                    <a href="img/gallery/11.jpg" class="glightbox flex-shrink-0 w-72 h-48 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow snap-start" data-gallery="gallery1" data-title="Наши системы актуальны даже там, где совсем нет электричества — на отдаленных пляжах или в горах.">
-                        <img src="img/gallery/11.jpg" alt="Полная автономия" class="w-full h-full object-cover">
+                    <a href="img/gallery/11.jpg" class="glightbox flex-shrink-0 w-80 h-52 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 snap-start group relative" data-gallery="gallery1" data-title="Наши системы актуальны даже там, где совсем нет электричества — на отдаленных пляжах или в горах.">
+                        <img src="img/gallery/11.jpg" alt="Полная автономия" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </a>
-                    <a href="img/gallery/21.jpg" class="glightbox flex-shrink-0 w-72 h-48 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow snap-start" data-gallery="gallery1" data-title="Солнечные системы идеальны для сельского хозяйства: работа насосов и систем полива.">
-                        <img src="img/gallery/21.jpg" alt="Сельское хозяйство" class="w-full h-full object-cover">
+                    <a href="img/gallery/21.jpg" class="glightbox flex-shrink-0 w-80 h-52 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 snap-start group relative" data-gallery="gallery1" data-title="Солнечные системы идеальны для сельского хозяйства: работа насосов и систем полива.">
+                        <img src="img/gallery/21.jpg" alt="Сельское хозяйство" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </a>
-                    <a href="img/gallery/22.jpg" class="glightbox flex-shrink-0 w-72 h-48 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow snap-start" data-gallery="gallery1" data-title="Обеспечение энергией фермерских построек, инкубаторов и систем вентиляции.">
-                        <img src="img/gallery/22.jpg" alt="Автономная ферма" class="w-full h-full object-cover">
+                    <a href="img/gallery/22.jpg" class="glightbox flex-shrink-0 w-80 h-52 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 snap-start group relative" data-gallery="gallery1" data-title="Обеспечение энергией фермерских построек, инкубаторов и систем вентиляции.">
+                        <img src="img/gallery/22.jpg" alt="Автономная ферма" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </a>
                 </div>
 
-                <!-- Индикация прокрутки -->
+                <!-- Индикация прокрутки (Мобильная) -->
                 <div class="flex justify-center gap-2 mt-4 md:hidden">
-                    <div class="w-8 h-1 bg-brand-600 rounded-full"></div>
-                    <div class="w-2 h-1 bg-slate-200 rounded-full"></div>
-                    <div class="w-2 h-1 bg-slate-200 rounded-full"></div>
+                    <div class="w-8 h-1.5 bg-brand-600 rounded-full"></div>
+                    <div class="w-2 h-1.5 bg-slate-200 rounded-full"></div>
+                    <div class="w-2 h-1.5 bg-slate-200 rounded-full"></div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Раздел Этапы работы -->
-    <section id="steps" class="py-24 bg-white border-y border-slate-200">
+    <section id="steps" class="py-24 bg-white border-y border-slate-200/80">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16 reveal">
-                <h2 class="text-3xl font-bold text-corporate-900 mb-4">Этапы работы</h2>
-                <div class="w-16 h-1 bg-brand-600 mx-auto mb-6"></div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-corporate-900 mb-4 tracking-tight">Этапы работы</h2>
+                <div class="w-16 h-1.5 bg-brand-600 rounded-full mx-auto mb-6"></div>
                 <p class="text-slate-600 text-lg">Мы сопровождаем вас на каждом этапе — от первой консультации до сервисного обслуживания готовой системы.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-5 gap-8 relative">
                 <!-- Линия соединения (только для десктопа) -->
-                <div class="hidden md:block absolute top-1/4 left-0 right-0 h-0.5 bg-slate-100 -z-10"></div>
+                <div class="hidden md:block absolute top-8 left-0 right-0 h-0.5 border-t-2 border-dashed border-slate-200 -z-10"></div>
 
                 <!-- Этап 1 -->
-                <div class="flex flex-col items-center text-center reveal">
-                    <div class="w-16 h-16 bg-brand-50 rounded-full flex items-center justify-center mb-6 border-4 border-white shadow-sm">
+                <div class="flex flex-col items-center text-center reveal relative">
+                    <span class="text-9xl font-bold text-slate-200/50 absolute top-0 left-1/2 -translate-x-1/2 -z-10 select-none">01</span>
+                    <div class="w-16 h-16 bg-brand-50 rounded-full flex items-center justify-center mb-6 border-4 border-white shadow-md">
                         <i data-lucide="clipboard-list" class="w-7 h-7 text-brand-600"></i>
                     </div>
-                    <h3 class="font-bold text-corporate-900 mb-2">Заявка и консультация</h3>
-                    <p class="text-sm text-slate-500">Обсуждаем ваши потребности и подбираем предварительное решение.</p>
+                    <h3 class="font-bold text-corporate-900 mb-2 text-lg">Заявка и консультация</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Обсуждаем ваши потребности и подбираем предварительное решение.</p>
                 </div>
 
                 <!-- Этап 2 -->
-                <div class="flex flex-col items-center text-center reveal">
-                    <div class="w-16 h-16 bg-brand-50 rounded-full flex items-center justify-center mb-6 border-4 border-white shadow-sm">
+                <div class="flex flex-col items-center text-center reveal relative">
+                    <span class="text-9xl font-bold text-slate-200/50 absolute top-0 left-1/2 -translate-x-1/2 -z-10 select-none">02</span>
+                    <div class="w-16 h-16 bg-brand-50 rounded-full flex items-center justify-center mb-6 border-4 border-white shadow-md">
                         <i data-lucide="ruler" class="w-7 h-7 text-brand-600"></i>
                     </div>
-                    <h3 class="font-bold text-corporate-900 mb-2">Технический аудит</h3>
-                    <p class="text-sm text-slate-500">Выезд инженера на объект для замеров и оценки условий монтажа.</p>
+                    <h3 class="font-bold text-corporate-900 mb-2 text-lg">Технический аудит</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Выезд инженера на объект для замеров и оценки условий монтажа.</p>
                 </div>
 
                 <!-- Этап 3 -->
-                <div class="flex flex-col items-center text-center reveal">
-                    <div class="w-16 h-16 bg-brand-50 rounded-full flex items-center justify-center mb-6 border-4 border-white shadow-sm">
+                <div class="flex flex-col items-center text-center reveal relative">
+                    <span class="text-9xl font-bold text-slate-200/50 absolute top-0 left-1/2 -translate-x-1/2 -z-10 select-none">03</span>
+                    <div class="w-16 h-16 bg-brand-50 rounded-full flex items-center justify-center mb-6 border-4 border-white shadow-md">
                         <i data-lucide="file-text" class="w-7 h-7 text-brand-600"></i>
                     </div>
-                    <h3 class="font-bold text-corporate-900 mb-2">Договор и проект</h3>
-                    <p class="text-sm text-slate-500">Заключаем официальный договор и готовим проектную документацию.</p>
+                    <h3 class="font-bold text-corporate-900 mb-2 text-lg">Договор и проект</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Заключаем официальный договор и готовим проектную документацию.</p>
                 </div>
 
                 <!-- Этап 4 -->
-                <div class="flex flex-col items-center text-center reveal">
-                    <div class="w-16 h-16 bg-brand-50 rounded-full flex items-center justify-center mb-6 border-4 border-white shadow-sm">
+                <div class="flex flex-col items-center text-center reveal relative">
+                    <span class="text-9xl font-bold text-slate-200/50 absolute top-0 left-1/2 -translate-x-1/2 -z-10 select-none">04</span>
+                    <div class="w-16 h-16 bg-brand-50 rounded-full flex items-center justify-center mb-6 border-4 border-white shadow-md">
                         <i data-lucide="hard-hat" class="w-7 h-7 text-brand-600"></i>
                     </div>
-                    <h3 class="font-bold text-corporate-900 mb-2">Монтаж и запуск</h3>
-                    <p class="text-sm text-slate-500">Профессиональная установка оборудования и пусконаладка системы.</p>
+                    <h3 class="font-bold text-corporate-900 mb-2 text-lg">Монтаж и запуск</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Профессиональная установка оборудования и пусконаладка системы.</p>
                 </div>
 
                 <!-- Этап 5 -->
-                <div class="flex flex-col items-center text-center reveal">
-                    <div class="w-16 h-16 bg-brand-50 rounded-full flex items-center justify-center mb-6 border-4 border-white shadow-sm">
+                <div class="flex flex-col items-center text-center reveal relative">
+                    <span class="text-9xl font-bold text-slate-200/50 absolute top-0 left-1/2 -translate-x-1/2 -z-10 select-none">05</span>
+                    <div class="w-16 h-16 bg-brand-50 rounded-full flex items-center justify-center mb-6 border-4 border-white shadow-md">
                         <i data-lucide="wrench" class="w-7 h-7 text-brand-600"></i>
                     </div>
-                    <h3 class="font-bold text-corporate-900 mb-2">Обслуживание</h3>
-                    <p class="text-sm text-slate-500">Обеспечиваем гарантийную поддержку и сервисное обслуживание.</p>
+                    <h3 class="font-bold text-corporate-900 mb-2 text-lg">Обслуживание</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Обеспечиваем гарантийную поддержку и сервисное обслуживание.</p>
                 </div>
             </div>
         </div>
@@ -345,61 +374,61 @@
     <section id="about" class="py-24 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-4xl mx-auto mb-16 reveal">
-                <h2 class="text-3xl font-bold text-corporate-900 mb-6">О нас</h2>
-                <p class="text-slate-600 text-lg leading-relaxed">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-corporate-900 mb-6 tracking-tight">О нас</h2>
+                <p class="text-slate-600 text-lg leading-relaxed font-normal">
                     Мы занимаемся установкой и обслуживанием солнечных панелей и станций на территории Республики Абхазия уже более 5 лет. У нас огромный опыт и большая база довольных клиентов, которые сотрудничают с нами. <a href="tel:+79407770774" class="text-brand-600 font-semibold hover:underline decoration-2 underline-offset-4">Свяжитесь с нами</a>, чтобы получить ответы на любые интересующие вас вопросы.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- Наши услуги -->
-                <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow reveal">
+                <div class="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow reveal">
                     <div class="w-12 h-12 bg-brand-50 rounded-xl flex items-center justify-center mb-6">
                         <i data-lucide="settings" class="w-6 h-6 text-brand-600"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-corporate-900 mb-4">Наши услуги</h3>
-                    <ul class="space-y-3 text-slate-600">
+                    <h3 class="text-xl font-bold text-corporate-900 mb-6">Наши услуги</h3>
+                    <ul class="space-y-4 text-slate-600">
                         <li class="flex items-start gap-3">
                             <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-500 shrink-0 mt-0.5"></i>
-                            <span>Индивидуальный подход</span>
+                            <span class="font-medium">Индивидуальный подход</span>
                         </li>
                         <li class="flex items-start gap-3">
                             <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-500 shrink-0 mt-0.5"></i>
-                            <span>Установка комплектов электростанций</span>
+                            <span class="font-medium">Установка комплектов электростанций</span>
                         </li>
                         <li class="flex items-start gap-3">
                             <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-500 shrink-0 mt-0.5"></i>
-                            <span>Доставка оригинального оборудования</span>
+                            <span class="font-medium">Доставка оригинального оборудования</span>
                         </li>
                         <li class="flex items-start gap-3">
                             <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-500 shrink-0 mt-0.5"></i>
-                            <span>Работа с крупными объектами</span>
+                            <span class="font-medium">Работа с крупными объектами</span>
                         </li>
                     </ul>
                 </div>
 
                 <!-- Наша команда -->
-                <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow reveal">
+                <div class="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow reveal">
                     <div class="w-12 h-12 bg-brand-50 rounded-xl flex items-center justify-center mb-6">
                         <i data-lucide="users" class="w-6 h-6 text-brand-600"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-corporate-900 mb-4">Наша команда</h3>
-                    <ul class="space-y-3 text-slate-600">
+                    <h3 class="text-xl font-bold text-corporate-900 mb-6">Наша команда</h3>
+                    <ul class="space-y-4 text-slate-600">
                         <li class="flex items-start gap-3">
                             <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-500 shrink-0 mt-0.5"></i>
-                            <span>Профессиональные инженеры</span>
+                            <span class="font-medium">Профессиональные инженеры</span>
                         </li>
                         <li class="flex items-start gap-3">
                             <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-500 shrink-0 mt-0.5"></i>
-                            <span>Квалифицированные электрики</span>
+                            <span class="font-medium">Квалифицированные электрики</span>
                         </li>
                         <li class="flex items-start gap-3">
                             <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-500 shrink-0 mt-0.5"></i>
-                            <span>Инженеры систем отопления</span>
+                            <span class="font-medium">Инженеры систем отопления</span>
                         </li>
                         <li class="flex items-start gap-3">
                             <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-500 shrink-0 mt-0.5"></i>
-                            <span>Монтажники-высотники и логисты</span>
+                            <span class="font-medium">Монтажники-высотники и логисты</span>
                         </li>
                     </ul>
                 </div>
@@ -408,44 +437,43 @@
         </div>
     </section>
 
-
     <!-- Подвал (Footer) -->
     <footer class="bg-corporate-950 text-slate-400 py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 border-b border-slate-800 pb-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 border-b border-slate-800/80 pb-8">
                 <div class="col-span-1 md:col-span-2">
                     <div class="flex items-center gap-3 mb-4">
                         <img src="img/logo.png" alt="Мой Зелёный дом Logo" class="w-10 h-10">
                         <span class="font-bold text-lg tracking-tight text-white">Мой Зелёный дом</span>
                     </div>
-                    <p class="text-sm max-w-sm mb-4">
+                    <p class="text-sm max-w-sm mb-4 leading-relaxed">
                         Профессиональные решения в сфере возобновляемой энергетики. Бесперебойное электричество в Абхазии.
                     </p>
                     <a href="tel:+79407770774" class="inline-block text-white font-bold text-lg mb-6 hover:text-brand-500 transition-colors">
                         +7 (940) 777-07-74
                     </a>
-                    <div class="flex flex-wrap gap-4">
-                        <a href="https://www.instagram.com/mygreenenergy_apsny" target="_blank" class="w-10 h-10 rounded-sm bg-corporate-900 flex items-center justify-center hover:bg-pink-600 hover:text-white transition-colors border border-slate-800 hover:border-pink-600">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                    <div class="flex flex-wrap gap-3">
+                        <a href="https://www.instagram.com/mygreenenergy_apsny" target="_blank" class="w-10 h-10 rounded-xl bg-corporate-900 flex items-center justify-center hover:bg-pink-600 hover:text-white transition-all border border-slate-800 hover:border-pink-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
                         </a>
-                        <a href="https://www.facebook.com/mygreenenergy.apsny" target="_blank" class="w-10 h-10 rounded-sm bg-corporate-900 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors border border-slate-800 hover:border-blue-600">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                        <a href="https://www.facebook.com/mygreenenergy.apsny" target="_blank" class="w-10 h-10 rounded-xl bg-corporate-900 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all border border-slate-800 hover:border-blue-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
                         </a>
-                        <a href="https://www.youtube.com/channel/UCUL2A7DuA3e49RZr_q3-4Ng" target="_blank" class="w-10 h-10 rounded-sm bg-corporate-900 flex items-center justify-center hover:bg-red-600 hover:text-white transition-colors border border-slate-800 hover:border-red-600">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+                        <a href="https://www.youtube.com/channel/UCUL2A7DuA3e49RZr_q3-4Ng" target="_blank" class="w-10 h-10 rounded-xl bg-corporate-900 flex items-center justify-center hover:bg-red-600 hover:text-white transition-all border border-slate-800 hover:border-red-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
                         </a>
-                        <a href="https://wa.me/79407770774" target="_blank" class="w-10 h-10 rounded-sm bg-corporate-900 flex items-center justify-center hover:bg-emerald-600 hover:text-white transition-colors border border-slate-800 hover:border-emerald-600">
+                        <a href="https://wa.me/79407770774" target="_blank" class="w-10 h-10 rounded-xl bg-corporate-900 flex items-center justify-center hover:bg-emerald-600 hover:text-white transition-all border border-slate-800 hover:border-emerald-600">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                         </a>
-                        <a href="https://t.me/INVESTORmlm" target="_blank" class="w-10 h-10 rounded-sm bg-corporate-900 flex items-center justify-center hover:bg-sky-400 hover:text-white transition-colors border border-slate-800 hover:border-sky-400">
+                        <a href="https://t.me/INVESTORmlm" target="_blank" class="w-10 h-10 rounded-xl bg-corporate-900 flex items-center justify-center hover:bg-sky-400 hover:text-white transition-all border border-slate-800 hover:border-sky-400">
                             <i data-lucide="send" class="w-5 h-5"></i>
                         </a>
                     </div>
                 </div>
 
                 <div>
-                    <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Навигация</h4>
-                    <ul class="space-y-2 text-sm">
+                    <h4 class="text-white font-bold mb-4 uppercase text-xs tracking-wider">Навигация</h4>
+                    <ul class="space-y-2.5 text-sm">
                         <li><a href="#services" class="hover:text-white transition-colors">Комплекты</a></li>
                         <li><a href="#steps" class="hover:text-white transition-colors">Этапы работы</a></li>
                         <li><a href="#about" class="hover:text-white transition-colors">О нас</a></li>
@@ -453,17 +481,17 @@
                 </div>
             </div>
             
-            <div class="flex flex-col md:flex-row justify-center items-center text-xs">
+            <div class="flex flex-col md:flex-row justify-center items-center text-xs text-slate-500">
                 <p> ООО "Мой Зелёный дом" Абхазия </p>
             </div>
         </div>
     </footer>
 
     <!-- Модальное окно заказа -->
-    <div id="order-modal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm">
-        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-md relative">
-            <button id="order-modal-close" type="button" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 transition-colors" aria-label="Закрыть">
-                <i data-lucide="x" class="w-6 h-6"></i>
+    <div id="order-modal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-md transition-opacity">
+        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-md relative overflow-hidden border border-slate-100">
+            <button id="order-modal-close" type="button" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 hover:text-slate-700 hover:bg-slate-200 transition-colors" aria-label="Закрыть">
+                <i data-lucide="x" class="w-5 h-5"></i>
             </button>
 
             <div class="p-8">
@@ -474,38 +502,38 @@
                     <input type="hidden" name="kit" id="order-kit" value="">
 
                     <div>
-                        <label class="block text-sm font-medium text-slate-700 mb-1">Ваше имя</label>
+                        <label class="block text-sm font-semibold text-slate-700 mb-1">Ваше имя</label>
                         <input type="text" name="name" required
-                            class="w-full px-4 py-3 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-500 text-slate-800"
+                            class="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-500/20 focus:border-brand-500 text-slate-800 transition-all"
                             placeholder="Иван">
                     </div>
 
                     <div>
-                        <label class="block text-sm font-medium text-slate-700 mb-1">Телефон</label>
+                        <label class="block text-sm font-semibold text-slate-700 mb-1">Телефон</label>
                         <input type="tel" name="phone" required
-                            class="w-full px-4 py-3 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-500 text-slate-800"
+                            class="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-500/20 focus:border-brand-500 text-slate-800 transition-all"
                             placeholder="+7 900 000-00-00">
                     </div>
 
                     <div>
-                        <label class="block text-sm font-medium text-slate-700 mb-1">Комментарий (необязательно)</label>
+                        <label class="block text-sm font-semibold text-slate-700 mb-1">Комментарий (необязательно)</label>
                         <textarea name="comment" rows="3"
-                            class="w-full px-4 py-3 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-500 text-slate-800 resize-none"
+                            class="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-500/20 focus:border-brand-500 text-slate-800 resize-none transition-all"
                             placeholder="Дополнительные пожелания"></textarea>
                     </div>
 
-                    <div id="order-error" class="hidden text-sm text-red-600 bg-red-50 px-4 py-2 rounded-lg"></div>
-                    <div id="order-success" class="hidden text-sm text-emerald-700 bg-emerald-50 px-4 py-2 rounded-lg">
+                    <div id="order-error" class="hidden text-sm text-red-600 bg-red-50 px-4 py-2.5 rounded-xl border border-red-100"></div>
+                    <div id="order-success" class="hidden text-sm text-emerald-700 bg-emerald-50 px-4 py-2.5 rounded-xl border border-emerald-100">
                         Заявка отправлена! Мы свяжемся с вами в ближайшее время.
                     </div>
 
                     <button id="order-submit" type="submit"
-                        class="w-full bg-brand-600 text-white py-3.5 rounded-lg font-semibold hover:bg-brand-500 transition-colors shadow-lg shadow-brand-600/20">
+                        class="w-full bg-brand-600 text-white py-3.5 rounded-xl font-semibold hover:bg-brand-500 transition-colors shadow-lg shadow-brand-600/20">
                         Отправить заявку
                     </button>
 
                     <p class="text-xs text-slate-400 text-center pt-1">
-                        Или свяжитесь напрямую: <a href="tel:+79407770774" class="text-brand-600 font-medium">+7 (940) 777-07-74</a>
+                        Или свяжитесь напрямую: <a href="tel:+79407770774" class="text-brand-600 font-semibold hover:underline">+7 (940) 777-07-74</a>
                     </p>
                 </form>
             </div>

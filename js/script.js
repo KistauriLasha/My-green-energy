@@ -71,4 +71,18 @@ document.addEventListener('DOMContentLoaded', () => {
         revealElements.forEach(el => el.classList.add('active'));
     }
 
+    // Навигация галереи на десктопе
+    const galleryContainer = document.getElementById('gallery-scroll');
+    const galleryPrev = document.getElementById('gallery-prev');
+    const galleryNext = document.getElementById('gallery-next');
+
+    if (galleryContainer && galleryPrev && galleryNext) {
+        galleryPrev.addEventListener('click', () => {
+            galleryContainer.scrollBy({ left: -320, behavior: 'smooth' });
+        });
+        galleryNext.addEventListener('click', () => {
+            galleryContainer.scrollBy({ left: 320, behavior: 'smooth' });
+        });
+    }
+
 });
